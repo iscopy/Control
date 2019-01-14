@@ -6,6 +6,10 @@
     <string name="tv_image">在里面加图片（图）也行</string>
     <string name="tv_background">也能够改变局部背景</string>
     <string name="tv_line">还能够划重点</string>
+    <string name="tv_line_bottom_all">所有文字加下滑线</string>
+    <string name="tv_in_line_all">所有文字加中滑线</string>
+    <string name="tv_in_line_all_clear">所有文字加中滑线（加清晰）</string>
+    <string name="tv_hickening">文字加粗</string>t
     <string name="tv_paragraph">段落的首行缩进效果</string>
     <string name="tv_aplication">家庭组是占用硬盘的最大原因之一，因此我们需要做的就是将家庭组的服务项关闭。操作方法：右键点击此电脑-管理-服务和应用程序-服务，找到HomeGroup Listener和HomeGroup Provider双击后选择禁用。</string>
 

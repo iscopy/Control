@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
+    android:orientation="vertical"
     tools:context=".ui.TextViewActivity">
 
     <TextView
@@ -17,7 +18,6 @@
         android:id="@+id/tv_big"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tv_color"
         android:layout_marginTop="20dp"
         android:text="@string/tv_big"/>
 
@@ -26,7 +26,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/tv_big"
         android:layout_marginTop="20dp"
         android:text="@string/tv_image"/>
 
@@ -34,7 +33,6 @@
         android:id="@+id/tv_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tv_image"
         android:layout_marginTop="20dp"
         android:text="@string/tv_background"/>
 
@@ -42,9 +40,36 @@
         android:id="@+id/tv_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tv_background"
         android:layout_marginTop="20dp"
         android:text="@string/tv_line"/>
+
+    <TextView
+        android:id="@+id/tv_line_bottom_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_line_bottom_all"/>
+
+    <TextView
+        android:id="@+id/tv_in_line_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_in_line_all"/>
+
+    <TextView
+        android:id="@+id/tv_in_line_all_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_in_line_all_clear"/>
+
+    <TextView
+        android:id="@+id/tv_hickening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_hickening"/>
 
     <TextView
         android:id="@+id/tv_paragraph"
@@ -58,8 +83,7 @@
         android:id="@+id/tv_aplication"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tv_paragraph"
         android:layout_marginTop="20dp"
         android:text="@string/tv_aplication"/>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
