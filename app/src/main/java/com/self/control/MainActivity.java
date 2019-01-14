@@ -9,6 +9,7 @@ import android.view.View;
 import com.self.control.adapter.MainAdapter;
 import com.self.control.base.BaseActivity;
 import com.self.control.ui.ButtonActivity;
+import com.self.control.ui.EditTextActivity;
 import com.self.control.ui.TextViewActivity;
 
 import butterknife.BindView;
@@ -47,7 +48,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initView(View view) {
-        name = new String[]{"Button","TextView"};
+        name = new String[]{"Button","TextView","EditText"};
         mainAdapter = new MainAdapter(getMContext(), name, i -> {
             switch (i){
                 case 0:
@@ -55,6 +56,9 @@ public class MainActivity extends BaseActivity {
                     break;
                 case 1:
                     startActivity(TextViewActivity.class);
+                    break;
+                case 2:
+                    startActivity(EditTextActivity.class);
                     break;
             }
         });

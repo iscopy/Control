@@ -122,7 +122,7 @@ public class TextViewActivity extends BaseActivity {
             @Override
             public void updateDrawState(TextPaint ds) {
                 super.updateDrawState(ds);
-                //ds.setColor(Color.RED);       //设置文件颜色
+                ds.setColor(Color.RED);       //设置文件颜色
                 ds.setUnderlineText(true);      //设置下划线
             }
 

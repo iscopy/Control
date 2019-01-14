@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.EditTextActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <!--android:focusable="true"
+        android:focusableInTouchMode="true"
+        在 EditText 的父容器加入这两个属性，则默认不显示光标-->
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="控制能否输入"/>
+    <!--background @null控制下划线为空-->
+
+    <Button
+        android:id="@+id/btn_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/et_input"
+        android:text="不能输入"/>
+
+    <Button
+        android:id="@+id/btn_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/btn_no"
+        android:text="可以输入"/>
+
+    <EditText
+        android:id="@+id/et_decimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/et_input"
+        android:digits="0123456789."
+        android:hint="只能输入：0123456789." />
+    <!--通过 android:digits="0123456789."控制，只能输入 digits 里的值（可以自定义） -->
+
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/et_decimal"
+        android:hint="只能输入正整数"/>
+    <!--通过 android:inputType="number" 控制，只能输入number-->
+
+    <EditText
+        android:id="@+id/et_cursorr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/et_number"
+        android:hint="光标位置设置"/>
+
+    <EditText
+        android:id="@+id/et_listener"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/et_cursorr"
+        android:hint="输入监听"/>
+
+</android.support.constraint.ConstraintLayout>
