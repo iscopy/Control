@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.ButtonActivity"></activity>
+        <activity android:name=".ui.ButtonActivity" />
+        <activity android:name=".ui.TextViewActivity"></activity>
     </application>
 
 </manifest>

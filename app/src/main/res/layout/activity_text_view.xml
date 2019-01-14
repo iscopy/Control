@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ui.TextViewActivity">
+
+    <TextView
+        android:id="@+id/tv_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_color" />
+
+    <TextView
+        android:id="@+id/tv_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_color"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_big"/>
+
+    <TextView
+        android:id="@+id/tv_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/tv_big"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_image"/>
+
+    <TextView
+        android:id="@+id/tv_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_image"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_background"/>
+
+    <TextView
+        android:id="@+id/tv_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_background"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_line"/>
+
+    <TextView
+        android:id="@+id/tv_paragraph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_line"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_paragraph"/>
+
+    <TextView
+        android:id="@+id/tv_aplication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_paragraph"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_aplication"/>
+
+</android.support.constraint.ConstraintLayout>
