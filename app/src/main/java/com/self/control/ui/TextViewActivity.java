@@ -183,8 +183,8 @@ public class TextViewActivity extends BaseActivity {
         tvAplication.setMovementMethod(LinkMovementMethod.getInstance());//设置响应点击事件
         tvAplication.setText(spannableString);
         tvAplication.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                R.mipmap.ic_launcher_round,
                 R.mipmap.ic_launcher_round,//getResources().getDrawable(R.mipmap.ic_launcher_round)
+                R.mipmap.ic_launcher_round,
                 R.mipmap.ic_launcher_round,
                 R.mipmap.ic_launcher_round);
     }
