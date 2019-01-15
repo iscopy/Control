@@ -10,6 +10,7 @@ import com.self.control.adapter.MainAdapter;
 import com.self.control.base.BaseActivity;
 import com.self.control.ui.ButtonActivity;
 import com.self.control.ui.EditTextActivity;
+import com.self.control.ui.ImageViewActivity;
 import com.self.control.ui.TextViewActivity;
 
 import butterknife.BindView;
@@ -48,7 +49,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initView(View view) {
-        name = new String[]{"Button","TextView","EditText"};
+        name = new String[]{"Button","TextView","EditText","ImageView"};
         mainAdapter = new MainAdapter(getMContext(), name, i -> {
             switch (i){
                 case 0:
@@ -59,6 +60,9 @@ public class MainActivity extends BaseActivity {
                     break;
                 case 2:
                     startActivity(EditTextActivity.class);
+                    break;
+                case 3:
+                    startActivity(ImageViewActivity.class);
                     break;
             }
         });

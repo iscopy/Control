@@ -6,4 +6,7 @@
 
     <!--青色-->
     <color name="young">#00FFFF</color>
+
+    <!--ImageView-->
+    <color name="image_fore">#50FF0000</color>
 </resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.ImageViewActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_fore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/iamge_view"/>
+
+            <ImageView
+                android:id="@+id/iv_zoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="300dp"
+                android:maxHeight="300dp"
+                android:src="@mipmap/iamge_view"/>
+            <!--android:adjustViewBounds="true" 设置缩放是否保存原图宽高比例
+                需要配合 maxWidth 和 maxHeight 设置，匹配这两个值中小的值-->
+
+            <ImageView
+                android:id="@+id/iv_alpha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:src="@mipmap/iamge_view"/>
+            <!--android:alpha="0.5" 设置图片透明度 0f > 1f  (float类型)-->
+
+            <com.self.control.view.CircleImageView
+                android:id="@+id/civ_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/iamge_view"/>
+
+            <ImageView
+                android:id="@+id/iv_scale_type"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:background="@color/young"
+                android:src="@mipmap/iamge_view"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
