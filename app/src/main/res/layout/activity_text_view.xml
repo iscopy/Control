@@ -8,82 +8,106 @@
     android:orientation="vertical"
     tools:context=".ui.TextViewActivity">
 
-    <TextView
-        android:id="@+id/tv_color"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_color" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tv_big"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/tv_big"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="@string/tv_image"/>
+            <TextView
+                android:id="@+id/tv_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_color" />
 
-    <TextView
-        android:id="@+id/tv_background"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/tv_background"/>
+            <TextView
+                android:id="@+id/tv_big"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_big"/>
 
-    <TextView
-        android:id="@+id/tv_line"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/tv_line"/>
+            <TextView
+                android:id="@+id/tv_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_image"/>
 
-    <TextView
-        android:id="@+id/tv_line_bottom_all"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/tv_line_bottom_all"/>
+            <TextView
+                android:id="@+id/tv_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_background"/>
 
-    <TextView
-        android:id="@+id/tv_in_line_all"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/tv_in_line_all"/>
+            <TextView
+                android:id="@+id/tv_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_line"/>
 
-    <TextView
-        android:id="@+id/tv_in_line_all_clear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/tv_in_line_all_clear"/>
+            <TextView
+                android:id="@+id/tv_line_bottom_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_line_bottom_all"/>
 
-    <TextView
-        android:id="@+id/tv_hickening"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/tv_hickening"/>
+            <TextView
+                android:id="@+id/tv_in_line_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_in_line_all"/>
 
-    <TextView
-        android:id="@+id/tv_paragraph"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tv_line"
-        android:layout_marginTop="20dp"
-        android:text="@string/tv_paragraph"/>
+            <TextView
+                android:id="@+id/tv_in_line_all_clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_in_line_all_clear"/>
 
-    <TextView
-        android:id="@+id/tv_aplication"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/tv_aplication"/>
+            <TextView
+                android:id="@+id/tv_hickening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_hickening"/>
+
+            <TextView
+                android:id="@+id/tv_paragraph"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_line"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_paragraph"/>
+
+            <TextView
+                android:id="@+id/tv_aplication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/tv_aplication"/>
+
+            <TextView
+                android:id="@+id/tv_spot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="@string/tv_aplication"/>
+            <!--singleLine 设置单行
+                ellipsize 设置 end 方向省略-->
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

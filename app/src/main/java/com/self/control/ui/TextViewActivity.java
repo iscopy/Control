@@ -9,6 +9,7 @@ import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextPaint;
+import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.BackgroundColorSpan;
@@ -23,6 +24,7 @@ import com.self.control.R;
 import com.self.control.base.BaseActivity;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class TextViewActivity extends BaseActivity {
 
@@ -48,18 +50,33 @@ public class TextViewActivity extends BaseActivity {
     TextView tvInLineAllClear;
     @BindView(R.id.tv_hickening)
     TextView tvHickening;
+    @BindView(R.id.tv_spot)
+    TextView tvSpot;
+    private boolean trfa = true;
 
     private SpannableStringBuilder span;
     private SpannableString spannableString;
 
     @Override
     public void widgetClick(View v) {
-
+        switch (v.getId()){
+            case R.id.tv_spot://点击文本，展开和折叠文字
+                if(trfa){
+                    tvSpot.setSingleLine(false);
+                    tvSpot.setText(getString(R.string.tv_aplication));
+                    trfa = false;
+                }else{
+                    tvSpot.setSingleLine(true);
+                    tvSpot.setText(tvSpot.getText());
+                    trfa = true;
+                }
+                break;
+        }
     }
 
     @Override
     public void setListener() {
-
+        tvSpot.setOnClickListener(this);
     }
 
     @Override
@@ -145,11 +162,11 @@ public class TextViewActivity extends BaseActivity {
         tvInLineAll.getPaint().setAntiAlias(true);
 
         //所有文字中划线（加清晰）
-        tvInLineAllClear.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG|Paint.ANTI_ALIAS_FLAG);
+        tvInLineAllClear.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);
         //tvInLineAllClear.getPaint().setAntiAlias(true);
 
         //文字加粗
-        tvHickening .getPaint().setFakeBoldText(true);
+        tvHickening.getPaint().setFakeBoldText(true);
 
         //首行缩进(隐藏前面两个字)
         span = new SpannableStringBuilder("缩进" + tvParagraph.getText());
@@ -187,10 +204,23 @@ public class TextViewActivity extends BaseActivity {
                 R.mipmap.ic_launcher_round,
                 R.mipmap.ic_launcher_round,
                 R.mipmap.ic_launcher_round);
+
+        //设置英文状态下也是三个点
+        tvSpot.post(() -> {
+            String ellipsizeStr = (String) TextUtils.ellipsize(tvSpot.getText(),  tvSpot.getPaint(), tvSpot.getMeasuredWidth() - 10, TextUtils.TruncateAt.END);
+            tvSpot.setText(ellipsizeStr);
+        });
     }
 
     @Override
     public void doBusiness(Context mContext) {
 
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
     }
 }
